@@ -3,6 +3,23 @@ typedef long long int ll;
 const unsigned int MOD = 1000000007;
 using namespace std;
 
+//create a linked list..
+class node {
+public:
+	int data;
+	node*next;
+	node(int d)
+	{
+		data = d;
+		next = NULL;
+	}
+};
+
+// void printLL(node*head)
+// {
+
+// }
+
 int main()
 {
 	ios_base::sync_with_stdio(false);
