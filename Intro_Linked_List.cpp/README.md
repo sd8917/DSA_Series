@@ -15,3 +15,10 @@
 
 * head ->  [data,next] -> [data,next] -> NULL.
 
+## Practical uses of the Linked list :- 
+
+* Image viewer
+* Web Browser
+* Music Player
+* Acts as base to complex data 
+* Dynamic Memory Allocation
