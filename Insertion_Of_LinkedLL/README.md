@@ -88,8 +88,11 @@ void insertAtEnd(node*&head, int data)
 
 #  ✨  InsertionAtMiddle  ✨
 
-```Check middle of the linked list
 ```
+Check middle of the linked list
+
+```
+
 
 # ✨  InsertionAtPos  ✨
 
@@ -150,7 +153,7 @@ void InsertionAtPos(node* &head, int pos, int data) {
 
 
 
-#Length of the LinkedList
+#  ✨  Length of the LinkedList  ✨
 
 For Length of the linkedList we need to have some variable ``` c ``` <br />
 which increase as we move to differnt node of the linkedlis using ```head = head->next``` till ``` head != NULL ```
