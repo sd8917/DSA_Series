@@ -1,0 +1,4 @@
+9-> 7-> 5-> 2-> NULL
+9-> 7-> 5-> 2-> 12-> 15-> 17-> 30-> NULL
+Length of the linked list : 8
+Insertion operation in LL 
