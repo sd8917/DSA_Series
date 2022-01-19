@@ -67,6 +67,28 @@ void insertAtEnd(node*&head, int data)
 
 }
 
+void InsertionAtPos(node* &head, int pos, int data) {
+	//if it at 0 means at front pos
+	if (pos == 0) {
+		insertAtFront(head, data);
+	}
+	else if (pos >= lengthLL(head) - 1) {
+		insertAtEnd(head, data);
+	}
+	else {
+		node* temp = head;
+		int count = 1;
+		while (count <= pos - 1) {
+			temp = temp->next;
+			count++;
+		}
+
+		node* n = new node(data);
+		n->next = temp->next;
+		temp->next = n;
+	}
+}
+
 void printLL(node*head)
 {
 	while (head)
@@ -100,6 +122,10 @@ int main()
 	insertAtEnd(head, 17);
 	insertAtEnd(head, 30);
 
+	printLL(head);
+
+
+	InsertionAtPos(head, 4, 90);
 	printLL(head);
 
 	cout << "Length of the linked list : " << lengthLL(head) << endl;
