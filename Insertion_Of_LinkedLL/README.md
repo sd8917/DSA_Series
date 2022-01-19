@@ -1,4 +1,4 @@
-* InsertionAtFront
+#  ✨InsertionAtFront ✨
 
 For inserting element at front we need to have always access to the first node,
 each time we insert the element at front we update the head node
@@ -36,8 +36,7 @@ void insertAtFront(node*&head, int data)
 
 
 
-
-* InsertionAtEnd
+# ✨ InsertionAtEnd ✨
 
 
 For inserting element at end we need to have always access to the last node,
@@ -87,12 +86,12 @@ void insertAtEnd(node*&head, int data)
 ```
 
 
-* InsertionAtMiddle
+#  ✨  InsertionAtMiddle  ✨
 
 ```Check middle of the linked list
 ```
 
-* InsertionAtPos 
+# ✨  InsertionAtPos  ✨
 
 
 For Inserting element at pos we need to have always access to the node just before it,
@@ -151,11 +150,12 @@ void InsertionAtPos(node* &head, int pos, int data) {
 
 
 
-### Length of the LinkedList
+#Length of the LinkedList
 
 For Length of the linkedList we need to have some variable ``` c ``` <br />
 which increase as we move to differnt node of the linkedlis using ```head = head->next``` till ``` head != NULL ```
 
+### Code : 
 ```
 int lengthLL(node*head)
 {
