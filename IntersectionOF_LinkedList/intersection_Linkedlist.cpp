@@ -89,51 +89,36 @@ void InsertionAtPos(node* &head, int pos, int data) {
 	}
 }
 
-
-//DETECTING OF THE LOOPS.
-bool detectLoop(node*&head)
+//intersection of the linkedlist
+int intersectionPoint(node*head1, node*head2)
 {
-	if (head == NULL) return false;
-	node*slow = head;
-	node*fast = head;
+	node*curr1 = head1;
 
-	while (fast && fast->next != NULL)
+	node*curr2 = head2;
+
+	while (curr1 != curr2)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-
-		if (slow == fast) return true;
-	}
-
-	return false;
-}
-
-//Remove the loop
-node* remove_Loop(node*&head)
-{
-	node*sp = head;
-	node*fp = head;
-
-	while (fp && & fp->next)
-	{
-		sp = sp->next;
-		fp = fp->next->next;
-
-		if (sp == fp) { break ;}
-	}
-
-	if (sp == fp)
-	{
-		sp = head;
-		while (sp->next != fp->next)
+		if (curr1 == NULL)
 		{
-			sp = sp->next;
-			fp = fp->next;
+			curr1 = head2;
 		}
-		fp->next = NULL;
+		else {
+			curr1 = curr1->next;
+		}
+
+
+		if (curr2 == NULL) {
+			curr2 = head1;
+		}
+		else {
+			curr2 = curr2->next;
+		}
 	}
-	return head;
+
+	return curr1->data;
 }
+
+
 
 void printLL(node*head)
 {
@@ -154,49 +139,33 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 
-	node*head = NULL;
+	node*head1 = NULL;
+	node*head2 = NULL;
 
-	insertAtFront(head, 2);
-	insertAtFront(head, 5);
-	insertAtFront(head, 7);
-	insertAtFront(head, 9);
+	insertAtFront(head1, 2);
+	insertAtEnd(head1, 1);
+	insertAtEnd( head1, 7);
+	insertAtEnd(head1, 10);
 
-	printLL(head);
-
-	insertAtEnd(head, 12);
-	insertAtEnd(head, 15);
-	insertAtEnd(head, 17);
-	insertAtEnd(head, 30);
-
-	printLL(head);
-
-
-	InsertionAtPos(head, 4, 90);
-	printLL(head);
-
-
-	node*first = head;
-	node*temp = head;
-
-	while (temp->next != NULL)
+	node*temp = head1;
+	while (temp)
 	{
+		if (temp->data == 1)
+		{
+
+			break;
+		}
 		temp = temp->next;
 	}
-	temp->next = head;
+	printLL(head1);
 
-	if (detectLoop(head))
-	{
-		cout << "There is a loop in the linked list" << endl;
-	}
-	else {
-		cout << "There is no loop in the linked list " << endl;
-	}
 
-	cout << "Removing of the loop from the linkedList " << endl;
+	insertAtFront(head2, 5);
+	head2->next = temp->next; //making connection between two linked list...
 
-	node*ans = remove_Loop(head);
+	printLL(head2);
 
-	printLL(ans);
+	cout << "intersection of the linked list : " << intersectionPoint(head1, head2) << endl;
 
 #ifndef ONLINE_JUDGE
 	cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";

@@ -3,3 +3,4 @@
 9-> 7-> 5-> 2-> 90-> 12-> 15-> 17-> 30-> NULL
 There is a loop in the linked list
 Removing of the loop from the linkedList 
+9-> NULL

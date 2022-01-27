@@ -53,22 +53,7 @@ First part we detected the loop and it has loop then for removing the we need to
 
 ```
 
-bool detectLoop(node*&head)
-{
-	if (head == NULL) return false;
-	node*slow = head;
-	node*fast = head;
 
-	while (fast && fast->next != NULL)
-	{
-		slow = slow->next;
-		fast = fast->next->next;
-
-		if (slow == fast) return true;
-	}
-
-	return false;
-}
 
 ```
 

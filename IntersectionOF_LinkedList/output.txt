@@ -1,0 +1,3 @@
+2-> 1-> 7-> 10-> NULL
+5-> 7-> 10-> NULL
+intersection of the linked list : 7
