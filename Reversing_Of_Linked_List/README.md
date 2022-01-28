@@ -1,4 +1,4 @@
-# ✨ Intersecion of LinkedList ✨
+# ✨ Reverse of LinkedList ✨
 
 Reverse the LinkedList
 
